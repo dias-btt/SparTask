@@ -12,7 +12,7 @@ import SwiftData
 struct SparTaskApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            SavedProduct.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct SparTaskApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabBarView()
         }
         .modelContainer(sharedModelContainer)
     }
